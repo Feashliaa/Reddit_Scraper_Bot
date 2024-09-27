@@ -178,16 +178,6 @@ class ScraperBot:
         except Exception as e:
             print(f"Failed to sync commands: {e}")
 
-    """ # async guild commands
-    async def sync_commands(self):
-        try:
-            # Specify a guild ID for faster syncing during development
-            guild = discord.Object(id="730835327908053152")
-            synced = await self.tree.sync(guild=guild)
-            print(f"Synced {len(synced)} command(s) in the guild.")
-        except Exception as e:
-            print(f"Failed to sync commands: {e}")"""
-
     def run(self):
         @self.bot.event
         async def on_ready():
